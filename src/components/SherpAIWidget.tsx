@@ -106,8 +106,8 @@ export function SherpAIWidget({
             <Image
               src="/sherpai-dog.png"
               alt="SherpAI avatar"
-              width={64}
-              height={64}
+              width={32}
+              height={32}
               sizes="32px"
               className="h-full w-full object-cover"
             />
