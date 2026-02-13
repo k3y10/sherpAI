@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import {
   forecastZones,
   observations as initialObservations,
@@ -180,6 +181,51 @@ export default function Home() {
 
       <main className="mx-auto grid w-full max-w-7xl gap-6 px-6 py-8 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="flex flex-col gap-4">
+          <div className="card overflow-hidden p-0">
+            <Image
+              src="/terrasatch-banner.png"
+              alt="TerraSatch ridgeline banner"
+              width={1319}
+              height={362}
+              sizes="100vw"
+              priority
+              className="h-36 w-full object-cover sm:h-40"
+            />
+            <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border)] bg-[var(--panel)] px-4 py-3">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/terrasatch-logo.png"
+                  alt="TerraSatch logo"
+                  width={40}
+                  height={40}
+                  sizes="40px"
+                  className="h-10 w-10 rounded-xl bg-white/90 p-1"
+                />
+                <div>
+                  <p className="text-sm font-semibold">TerraSatch</p>
+                  <p className="text-xs text-muted">SherpAI AvyTS intelligence suite</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/transparent-logo.png"
+                  alt="TerraSatch mark"
+                  width={32}
+                  height={32}
+                  sizes="32px"
+                  className="h-8 w-8"
+                />
+                <Image
+                  src="/avyrisk.png"
+                  alt="AvyRisk"
+                  width={1536}
+                  height={813}
+                  sizes="140px"
+                  className="h-8 w-auto max-w-[140px] object-contain"
+                />
+              </div>
+            </div>
+          </div>
           <div className="card relative h-[520px] overflow-hidden p-4">
             <MapCanvas
               zones={zones}

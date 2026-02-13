@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import type { ForecastZone, Observation } from "@/lib/mockData";
 import { cn } from "@/lib/utils";
-import { Sparkles } from "lucide-react";
 
 const quickActions = [
   "Summarize selected zone",
@@ -102,8 +102,15 @@ export function SherpAIWidget({
     <div className="glass-panel flex flex-col gap-4 rounded-3xl p-4 text-sm">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent)] text-white">
-            <Sparkles className="h-4 w-4" />
+          <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[var(--accent)]">
+            <Image
+              src="/sherpai-dog.png"
+              alt="SherpAI avatar"
+              width={64}
+              height={64}
+              sizes="32px"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-muted">SherpAI</p>
